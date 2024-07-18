@@ -6,7 +6,7 @@
 #include "stats.h"
 
 Stats Statistics::ComputeStatistics(const std::vector<float>& numbers) {
-    Stats stats;
+    Statistics::Stats stats;
     if (numbers.empty()) {
         stats.average = std::numeric_limits<float>::quiet_NaN();
         stats.min = std::numeric_limits<float>::quiet_NaN();
