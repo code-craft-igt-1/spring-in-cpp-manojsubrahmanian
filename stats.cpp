@@ -6,18 +6,17 @@
 #include "stats.h"
 
 Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& numbers) {
-    Statistics::Stats stats;
+    Stats computedStats;
     if (numbers.empty()) {
-        stats.average = std::numeric_limits<float>::quiet_NaN();
-        stats.min = std::numeric_limits<float>::quiet_NaN();
-        stats.max = std::numeric_limits<float>::quiet_NaN();
-        return stats;
+        computedStats.average = std::numeric_limits<float>::quiet_NaN();
+        computedStats.min = std::numeric_limits<float>::quiet_NaN();
+        computedStats.max = std::numeric_limits<float>::quiet_NaN();
+        return computedStats;
     }
 
-    float sum = std::accumulate(numbers.begin(), numbers.end(), 0.0f);
-    stats.average = sum / numbers.size();
-    stats.min = *std::min_element(numbers.begin(), numbers.end());
-    stats.max = *std::max_element(numbers.begin(), numbers.end());
+    computedStats.min = *std::min_element(numbers.begin(), numbers.end());
+    computedStats.max = *std::max_element(numbers.begin(), numbers.end());
+    computedStats.average = std::accumulate(numbers.begin(), numbers.end(), 0.0f) / numbers.size();
 
-    return stats;
+    return computedStats;
 }
