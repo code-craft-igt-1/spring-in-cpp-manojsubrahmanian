@@ -8,5 +8,5 @@ namespace Statistics {
         float max;
     };
 
-    Stats ComputeStatistics(const std::vector<___>& );
+    Stats ComputeStatistics(const std::vector<const std::vector<float>& numbers>& );
 }
