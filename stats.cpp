@@ -5,7 +5,7 @@
 #include <cmath>
 #include "stats.h"
 
-Stats Statistics::ComputeStatistics(const std::vector<float>& numbers) {
+Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& numbers) {
     Statistics::Stats stats;
     if (numbers.empty()) {
         stats.average = std::numeric_limits<float>::quiet_NaN();
