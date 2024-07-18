@@ -1,3 +1,8 @@
+#include <vector>
+#include <algorithm>
+#include <numeric>
+#include <limits>
+#include <cmath>
 #include "stats.h"
 
 Stats Statistics::ComputeStatistics(const std::vector<float>& numbers) {
