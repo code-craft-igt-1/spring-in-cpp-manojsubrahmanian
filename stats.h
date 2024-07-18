@@ -1,7 +1,19 @@
+// stats.h
+#ifndef STATS_H
+#define STATS_H
+
 #include <vector>
 
-namespace Statistics {
-    // define the Stats structure here. See the tests to infer its properties
-    
-    Stats ComputeStatistics(const std::vector<___>& );
-}
+class Statistics {
+public:
+    struct Stats {
+        float average;
+        float min;
+        float max;
+    };
+
+    static Stats ComputeStatistics(const std::vector<float>& numbers);
+};
+
+#endif // STATS_H
+
